@@ -55,7 +55,7 @@
 
         default_layer {
             bindings = <
-&kp C_VOL_DN  &lt 1 C_PLAY_PAUSE  &lt 2 C_VOLUME_UP
+&kp K_VOL_DN2  &lt 1 C_PLAY_PAUSE  &lt 2 K_VOL_UP2
             >;
         };
 
@@ -67,10 +67,12 @@
             label = "arrow_keys";
         };
 
-        layer_2 {
+        arrow_keys2 {
             bindings = <
-&kp PAGE_UP  &kp PAGE_DOWN  &trans
+&kp UP  &kp DOWN_ARROW  &trans
             >;
+
+            label = "arrow_keys2";
         };
     };
 };
