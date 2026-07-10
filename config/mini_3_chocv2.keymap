@@ -86,7 +86,7 @@
 
         arrow_keys2 {
             bindings = <
-&kp UP  &kp DOWN_ARROW  &trans
+&kp K_PREV  &kp K_NEXT  &trans
             >;
 
             label = "arrow_keys2";
