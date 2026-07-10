@@ -1,0 +1,4 @@
+name: zmk-keyboard-mini-3-chocv2
+build:
+  settings:
+    board_root: .
