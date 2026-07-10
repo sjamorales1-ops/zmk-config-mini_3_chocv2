@@ -58,14 +58,12 @@
             timeout-ms = <100>;
             key-positions = <0 1 2>;
             bindings = <&long_bt 0 0>;
-            layers = <0>;
         };
 
         bootloader {
             bindings = <&btldr1 0 0>;
             key-positions = <1 2>;
             timeout-ms = <100>;
-            layers = <0>;
         };
     };
 
