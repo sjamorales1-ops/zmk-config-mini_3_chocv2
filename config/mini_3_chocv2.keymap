@@ -9,6 +9,13 @@
             #binding-cells = <0>;
             bindings = <&bt BT_CLR>;
         };
+
+        bootloader1: bootloader1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bootloader>;
+            label = "BOOTLOADER1";
+        };
     };
 
     behaviors {
@@ -21,6 +28,16 @@
             tapping-term-ms = <2000>;
             bindings = <&bt_clr_macro>, <&none>;
         };
+
+        btldr1: btldr1 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <2000>;
+            bindings = <&bootloader1>, <&none>;
+
+            label = "BTLDR1";
+        };
     };
 
     combos {
@@ -32,6 +49,7 @@
             timeout-ms = <100>;
             key-positions = <0 2>;
             bindings = <&studio_unlock>;
+            layers = <0>;
         };
 
         // All 3 Keys = BT Clear (Hold 2s)
@@ -40,11 +58,12 @@
             timeout-ms = <100>;
             key-positions = <0 1 2>;
             bindings = <&long_bt 0 0>;
+            layers = <0>;
         };
 
         bootloader {
-            bindings = <&bootloader>;
-            key-positions = <2 1>;
+            bindings = <&btldr1 0 0>;
+            key-positions = <1 2>;
             timeout-ms = <100>;
             layers = <0>;
         };
